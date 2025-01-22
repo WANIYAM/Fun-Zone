@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #440b63;
+            padding: 20px;
+        }
+
+        .card {
+            position: relative;
+            background-color: #fdf6e3; 
+            padding: 2rem;
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card .corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #440b63;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #440b63;
+        }
+
+        .card .corner.top-left {
+            top: -25px;
+            left: -25px;
+        }
+
+        .card .corner.top-right {
+            top: -25px;
+            right: -25px;
+        }
+
+        .card .corner.bottom-left {
+            bottom: -25px;
+            left: -25px;
+        }
+
+        .card .corner.bottom-right {
+            bottom: -25px;
+            right: -25px;
+        }
+
+        .card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            clip-path: inset(0px 0px 30px 0px round 15px);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .tag {
+            background-color: #78c2ad;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-actions a {
+            text-decoration: none;
+            color: #3b5998;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .card-actions a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="card-container"></div> <!-- Placeholder for dynamically generated cards -->
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Array of objects containing the data for each card
+        const cardsData = [
+            { id: 1, tag: 'Adventure', title: 'Murrissippi Motors', description: 'Discover the spirit of adventure with Murrissippi Motors! Cruise through...', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            { id: 2, tag: 'Excitement', title: 'Sunset Cruises', description: 'Enjoy a relaxing sunset cruise along the coast. Perfect for a peaceful evening.', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            { id: 3, tag: 'Explore', title: 'Mountain Trek', description: 'Join us on an adventurous trek through the beautiful mountains.', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            { id: 4, tag: 'Nature', title: 'Beach Safari', description: 'Take a thrilling safari along the beautiful sandy beaches.', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            { id: 5, tag: 'Culture', title: 'Historical Tour', description: 'Dive into the rich history of the ancient city.', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            { id: 6, tag: 'Relaxation', title: 'Spa Retreat', description: 'Unwind at the most luxurious spa retreat in the mountains.', imageUrl: 'https://images.prismic.io/dreamworld/Z2VqH5bqstJ98uxH_Rivertown-Murrissippi_Motors-01.jpg?auto=format%2Ccompress&rect=55%2C0%2C789%2C500&w=640&fit=max&q=85' },
+            
+            // Add more cards as needed
+        ];
+
+        // Function to create the HTML for each card
+        function createCard(card) {
+            return `
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <img src="${card.imageUrl}" alt="${card.title}">
+                        <div class="card-content">
+                            <div class="tag">${card.tag}</div>
+                            <div class="card-title">${card.title}</div>
+                            <div class="card-description">${card.description}</div>
+                            <div class="card-actions">
+                                <a href="#"><i class="fas fa-info-circle"></i> Learn more</a>
+                                <a href="#"><i class="fas fa-bookmark"></i> Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Loop through the cardsData array and append each card to the container
+        const cardContainer = document.getElementById('card-container');
+        cardsData.forEach(card => {
+            cardContainer.innerHTML += createCard(card);
+        });
+    </script>
+</body>
+</html>

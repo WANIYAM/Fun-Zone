@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #440b63;
+            padding: 20px;
+            color: white;
+        }
+        .card {
+            background-color: #fdf6e3;
+            border-radius: 12px;
+            padding: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="detail-container" class="mt-5"></div>
+    </div>
+
+    <script>
+        // Array of objects (same as used in the main page)
+        const cardsData = [
+            { id: 1, tag: 'Adventure', title: 'Murrissippi Motors', description: 'Discover the spirit of adventure with Murrissippi Motors!', imageUrl: 'https://placehold.co/300x150', details: 'More about Murrissippi Motors...' },
+            { id: 2, tag: 'Excitement', title: 'Sunset Cruises', description: 'Enjoy a relaxing sunset cruise along the coast.', imageUrl: 'https://placehold.co/300x150', details: 'Sunset Cruises offer unforgettable views.' },
+            { id: 3, tag: 'Explore', title: 'Mountain Trek', description: 'Join us on an adventurous trek through the mountains.', imageUrl: 'https://placehold.co/300x150', details: 'Experience the thrill of mountain trekking.' },
+            // Add more cards as needed
+        ];
+
+        // Extract the ID from the URL
+const queryParams = new URLSearchParams(window.location.search);
+const cardId = parseInt(queryParams.get('id'));
+
+// Find the card data
+const card = cardsData.find(card => card.id === cardId);
+
+if (card) {
+    document.body.innerHTML = `
+        <div class="container mt-5">
+            <div class="card">
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <img src="${card.imageUrl}" alt="${card.title}" />
+                <div class="card-content">
+                    <span class="tag">${card.tag}</span>
+                    <h2 class="card-title">${card.title}</h2>
+                    <p class="card-description">${card.description}</p>
+                </div>
+            </div>
+        </div>
+    `;
+} else {
+    document.body.innerHTML = '<h1>Card not found!</h1>';
+}
+
+    </script>
+</body>
+</html>

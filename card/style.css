@@ -1,0 +1,102 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Ticket Wrapper */
+  .ticket {
+    display: flex;
+    background-color: #ff4b4b;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Main Section */
+  .main-section {
+    flex: 3;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .inner-border {
+    border: 2px dotted #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .inner-border h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  
+  .inner-border p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .inner-border hr {
+    border: none;
+    border-top: 2px solid #fff;
+    width: 60%;
+    margin: 20px auto;
+  }
+  
+  /* Side Section */
+  .side-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d83939;
+    border-left: 2px dashed #fff;
+    padding: 10px;
+  }
+  
+  .stars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .stars span {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  /* Ticket Edges */
+  .ticket::before,
+  .ticket::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .ticket::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .ticket::after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
