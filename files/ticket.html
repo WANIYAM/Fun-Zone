@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park Tickets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3+8p7c8to2V4I1++Oq+7tbnwlrwn5jp6+cBOhFyy8Lgk55y5j6mJptOkD" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fef8f0; 
+            font-family: 'Arial', sans-serif;
+            color: #4b2b2b; 
+        }
+        .header {
+            background: #4b2b2b; 
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .ticket-card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .ticket-card-text {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #f2f2f2;
+        }
+        .btn-ticket {
+            background-color: #4b2b2b; 
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-ticket:hover {
+            background-color: #2c1a1a;
+            cursor: pointer;
+        }
+        .discount-section, .booking-section {
+            background: #ffffff;
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #4b2b2b; 
+        }
+        .discount-card {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f4f4f4; 
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        .discount-card-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .discount-card-text {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+        .discount-btn {
+            background-color: #4b2b2b;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .discount-btn:hover {
+            background-color: #2c1a1a;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1 style="color: white;">Exclusive Park Ticket Options</h1>
+        <p>Choose the perfect ticket for your adventure!</p>
+    </div>
+
+<img src="images/ticketbg.html" alt="">
+
+
+
+    <div class="container discount-section">
+        <h2 class="section-title">Special Discount Offers</h2>
+        <div class="row">
+          
+            <div style="background-color: #fcbf49;" class="col-md-4">
+                <div class="discount-card">
+                    <img style="height: 250px;width: 300px;" src="images/pass.avif" alt="">
+                </div>
+            </div>
+
+           
+            <div class="col-md-4">
+                <div class="discount-card mt-5">
+                    
+                    <p class="discount-card-text mt-5">Why choose one adventure when you can have them all? The Gold Coast Fun Pass bundles top attractions into one incredible deal—variety, value, and great times guaranteed! </div>
+            </div>
+
+           
+            <div style="background-color: #fcbf49;" class="col-md-4">
+                <div class="discount-card">
+                    <h4 class="discount-card-title">
+                        4 payments of
+
+                        $
+                        48.75
+                        with
+                      easypaisa</h4>
+                    <p class="discount-card-text mt-3">Full price of $195</p>
+                    <button class="discount-btn">ticket</button><br>
+                    <a class="mt-2" href="">See pass terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    <div class="container-fluid discount-section ">
+       
+        <div style="background-color: #fcbf49;" class="row">
+           
+            <div  class="col-md-4">
+               <img height="250px" width="350px" src="images/water.avif" alt="">
+            </div>
+
+           
+            <div class="col-md-8 mt-5">
+                <div class="discount-card">
+                    <h4 class="discount-card-title fs-5">WhiteWater World is back!</h4>
+                    <p class="discount-card-text">Open select days during the warmer months, WhiteWater World is the ultimate spot for slides, splashes, and summer fun. Don’t miss out this season!
+
+                    </p>
+                    <button class="discount-btn">View tickets option</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div class="container discount-section">
+        <h2 class="section-title">Special Discount Offers</h2>
+        <div class="row">
+          
+            <div style="background-color: #fcbf49;" class="col-md-4">
+                <div class="discount-card">
+                    <h4 style="font-size: 45px;" class="discount-card-title">Visitor Annual Pass</h4>
+                    <p class="discount-card-text">DREAMWORLD + SKYPOINT + WHITEWATER WORLD</p>
+                    
+                </div>
+            </div>
+
+           
+            <div class="col-md-4">
+                <div class="discount-card mt-5">
+                    
+                    <p class="discount-card-text mt-5">Why stop at one visit? With unlimited access to Dreamworld, WhiteWater World, and SkyPoint, plus seasonal events and perks, this pass delivers fun by the bucketload all year long.</p>
+                    </div>
+            </div>
+
+           
+            <div style="background-color: #fcbf49;" class="col-md-4">
+                <div class="discount-card">
+                    <h4 class="discount-card-title">4 payments of
+
+                         $
+                        44.75
+                        with easypaisa</h4>
+                    <p class="discount-card-text mt-3">Full price of $179</p>
+                    <button class="discount-btn">Select pass</button><br>
+                    <a class="mt-2" href="">See pass terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid discount-section ">
+       
+        <div style="background-color: #fcbf49;" class="row">
+           
+            <div  class="col-md-4">
+               <img height="250px" width="350px" src="images/ticket.avif" alt="">
+            </div>
+
+            <!-- Early Bird Discount -->
+            <div class="col-md-8 mt-5">
+                <div class="discount-card">
+                    <h4 class="discount-card-title fs-5">Time to renew your annual pass?</h4>
+                    <p class="discount-card-text">Keep the fun rolling with another year of unlimited park access and perks!</p>
+                    <button class="discount-btn">Reniew now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+            
+
+    <div class="container discount-section">
+        <h2 class="section-title">Special Discount Offers</h2>
+        <div class="row">
+            <!-- Local Discount -->
+            <div class="col-md-4">
+                <div class="discount-card">
+                    <h4 class="discount-card-title">Local Resident Discount</h4>
+                    <p class="discount-card-text">20% off for residents of the city. Proof of residence required.</p>
+                    <button class="discount-btn">Claim Offer</button>
+                </div>
+            </div>
+
+            <!-- Early Bird Discount -->
+            <div class="col-md-4">
+                <div class="discount-card">
+                    <h4 class="discount-card-title">Early Bird Special</h4>
+                    <p class="discount-card-text">Book your tickets at least 2 weeks in advance and save 15%!</p>
+                    <button class="discount-btn">Claim Offer</button>
+                </div>
+            </div>
+
+            <!-- Group Discount -->
+            <div class="col-md-4">
+                <div class="discount-card">
+                    <h4 class="discount-card-title">Group Booking Discount</h4>
+                    <p class="discount-card-text">Book tickets for 10+ people and get 25% off your total.</p>
+                    <button class="discount-btn">Claim Offer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+   
+   
+
+    
+
+
+
+
+
+
+           
+
+         
+
+
+    <!-- Booking Section -->
+    <div class="container booking-section">
+        <h2 class="section-title">Book Your Tickets Now</h2>
+        <p class="text-center">Hurry! Book your tickets in advance and guarantee your spot for an unforgettable experience.</p>
+        <div class="d-flex justify-content-center">
+            <button class="btn-ticket btn-lg">Book Tickets</button>
+        </div>
+    </div>
+
+    
+
+
+    
+<footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-3 footer-icons mb-4">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-tripadvisor"></i>
+        </div>
+  
+       
+        <div class="col-md-3">
+          <h5>News & Offers</h5>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Email Address">
+            <button class="btn px-4">Sign Up</button>
+          </form>
+        </div>
+  
+        
+        <div class="col-md-3">
+          <h5>Directions</h5>
+          <p>100 W. Hersheypark Drive, Hershey, PA 17033</p>
+          <button class="btn px-4">Get Directions</button>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <p>717-534-3900</p>
+          <button class="btn px-4">Contact Us</button>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+       
+        <div class="col-md-6">
+          <h5>Important Links</h5>
+          <div class="d-flex flex-wrap">
+            <div class="me-5">
+              <a href="#">Jobs</a><br>
+              <a href="#">Partners</a><br>
+              <a href="#">Gift Cards</a><br>
+              <a href="#">Volunteers</a><br>
+              <a href="#">Media</a><br>
+              <a href="#">Season Pass Portal</a>
+            </div>
+            <div>
+              <a href="#">Privacy Policy</a><br>
+              <a href="#">Social Responsibility</a><br>
+              <a href="#">Conditions</a><br>
+              <a href="#">Company Policies</a><br>
+              <a href="#">Do Not Sell My Personal Info</a><br>
+              <a href="#">Lost & Found</a>
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="col-md-6 text-end">
+          <i class="bi bi-apple me-3" style="font-size: 24px;"></i>
+          <i class="bi bi-android2" style="font-size: 24px;"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <div class="email-icon">
+    <i class="bi bi-envelope"></i>
+  </div>
+  
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0GZ5Jml1uMuZTgg2OobOq3eT6l4vJ7T40F0pZz0P8yEopV9V" crossorigin="anonymous"></script>
+</body>
+</html>

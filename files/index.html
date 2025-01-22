@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- navbar start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid ms-2 ">
+            
+            <button class="btn btn-outline-success fs-5 ms-5" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h12"/></svg>MENU</button>
+           
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item fs-5 ms-2">
+                
+                <a style="color: white;" class="nav-link active ms-4" aria-current="page" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="#45413c" d="M12.5 46.5a11.5 1.5 0 1 0 23 0a11.5 1.5 0 1 0-23 0" opacity="0.15"/><path fill="#ffe500" d="M10.5 24a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0"/><path fill="#ebcb00" d="M25.28 10.56a12.5 12.5 0 1 1-2.56 0a13.5 13.5 0 1 0 2.56 0"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M10.5 24a13.5 13.5 0 1 0 27 0a13.5 13.5 0 1 0-27 0"/><path fill="#ffe500" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M25.5 3a1.5 1.5 0 0 0-3 0v3a1.5 1.5 0 0 0 3 0ZM10.21 8.09a1.5 1.5 0 0 0-2.12 2.12l2.12 2.12a1.5 1.5 0 0 0 2.12-2.12ZM3 22.5a1.5 1.5 0 0 0 0 3h3a1.5 1.5 0 0 0 0-3Zm5.09 15.29a1.5 1.5 0 0 0 2.12 2.12l2.12-2.12a1.5 1.5 0 0 0-2.12-2.12ZM22.5 45a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0-3 0Zm15.29-5.09a1.5 1.5 0 0 0 2.12-2.12l-2.12-2.12a1.5 1.5 0 0 0-2.12 2.12ZM45 25.5a1.5 1.5 0 0 0 0-3h-3a1.5 1.5 0 0 0 0 3Zm-5.09-15.29a1.5 1.5 0 0 0-2.12-2.12l-2.12 2.12a1.5 1.5 0 0 0 2.12 2.12Z"/><path fill="#ffaa54" d="M14 27c0 .55.67 1 1.5 1s1.5-.45 1.5-1s-.67-1-1.5-1s-1.5.45-1.5 1"/><path fill="#ffb0ca" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M27.87 29.5a1 1 0 0 1 1 1.25a5 5 0 0 1-9.68 0a1 1 0 0 1 1-1.25Z"/><path fill="#ff87af" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M24 34.5a5 5 0 0 0 3.94-1.94A7.34 7.34 0 0 0 24 31.5a7.34 7.34 0 0 0-3.94 1.06A5 5 0 0 0 24 34.5"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M15 25a1.5 1.5 0 0 1 3 0"/><path fill="#ffaa54" d="M34 27c0 .55-.67 1-1.5 1s-1.5-.45-1.5-1s.67-1 1.5-1s1.5.45 1.5 1"/><path fill="none" stroke="#45413c" stroke-linecap="round" stroke-linejoin="round" d="M33 25a1.5 1.5 0 0 0-3 0"/><path fill="#fff48c" d="M20 13.5a4 1 0 1 0 8 0a4 1 0 1 0-8 0"/>
+                </svg>4:48   |</a>
+              </li>
+              <li class="nav-item fs-5 ">
+                <a class="location  nav-link" href="#"><b>KARACHI CITY,PAKISTAN</b></a>
+              </li>
+             
+              <li class="nav-item">
+                <img class="logo" src="images/logo.png" alt="Logo">
+            </li>
+             
+            <li class="nav-item fs-5 ms-5">
+                
+                <a style="color: white;" class="nav-link active ms-4" aria-current="page" href="#"> 
+                 پاکستان</a>
+              </li>
+
+              <li class="nav-item fs-5 ms-5">
+                
+                <a style="color: white;" class="nav-link active ms-5" aria-current="page" href="#"> 
+                 VISIT KARACHI</a>
+              </li>
+
+            
+            </ul>  
+        </div>
+       
+        </div>
+        </nav>
+      
+        <!-- navbar end -->
+    
+
+    <!-- hero section start -->
+    
+    <video class="hero" autoplay muted loop>
+        <source src="videoes/SFQ Hero Day.mp4" type="video/mp4">
+    </video>
+    <div class="text-container">
+    <h1 class=" first-heading text-center ">Welcome to the first of its kind theme park in Saudi</h1>
+    <div class="container-text mt-5">
+      <h1 class=" heading second-heading text-center"><b>5 record breaking rides</b></h1>
+      <h1 class=" heading second-heading text-center"><b>second heading</b></h1>
+      <h1 class=" heading second-heading text-center"><b>third heading</b></h1>
+    </div>
+    
+    <h5 class="third-heading text-center">SCROLL TO DISCOVER MORE</h5>
+   
+</div>
+ </div>  
+  <!-- hero section end -->
+ 
+   <!-- second section start -->
+
+   <div style="background-color: #4b2b2b;; width: 100%;" class="container-color">
+    <div style="margin-top: 30px;" class="container my-4 mt-5">
+      <div id="responsiveCarousel" class="carousel slide" data-bs-ride="carousel"><br>
+        <div class="d-flex align-items-center justify-content-between">
+          <h1 
+            class="fw-bold fst-italic" 
+            style="font-size: clamp(1.5rem, 4vw, 3rem); color: white; margin: 0;"
+          >
+            Rides, Attractions and Entertainment
+          </h1>
+          <button class="btn btn-success ms-3 fs-4">View All <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m16.172 9l-6.071-6.071l1.414-1.414L20 10l-.707.707l-7.778 7.778l-1.414-1.414L16.172 11H0V9z"/></svg></button>
+        </div><br>
+        <div class="carousel-inner">
+          <!-- First Slide -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center ">
+              <!-- First Card -->
+               <div class="mask"></div>
+              <div class="col-12 col-md-4">
+                <div data-aos="fade-right" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg1.avif" class="card-img-top rounded-top" style="height: 350px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Second Card -->
+              <div class="col-12 col-md-4">
+                <div data-aos="flip-left" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg2.avif" class="card-img-top rounded-top" style="height: 350px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Third Card -->
+              <div class="col-12 col-md-4">
+                <div data-aos="fade-left" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg3.avif" class="card-img-top rounded-top" style="height: 350px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 3</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+  
+          <!-- Second Slide -->
+          <div class="carousel-item">
+            <div class="row justify-content-center g-4">
+              <!-- Fourth Card -->
+              <div class="col-12 col-md-4">
+                <div data-aos="fade-right" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg1.avif" class="card-img-top rounded-top" style="height: 350px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 4</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Fifth Card -->
+              <div class="col-12 col-md-4">
+                <div data-aos="flip-left" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg2.avif" class="card-img-top rounded-top" style="height: 350px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 5</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Sixth Card -->
+              <div class="col-12 col-md-4">
+                <div data-aos="fade-left" class="card text-center border rounded-3" style="height: 480px; width: 450px;">
+                  <img src="images/rideimg3.avif" class="card-img-top rounded-top" style="height: 285px; width: 450px;" alt="Card Image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card 6</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam iure facere laborum quo aliquid cumque exercitationem facilis ea animi!</p>
+                    <button class="btn btn-success fs-5 mb-2" type="button">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+       
+        <div class="text-center mt-3">
+          <button class="btn btn-outline-success me-2" type="button" data-bs-target="#responsiveCarousel" data-bs-slide="prev">
+            Previous
+          </button>
+          <button class="btn btn-outline-success" type="button" data-bs-target="#responsiveCarousel" data-bs-slide="next">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- second section end -->
+  
+  
+
+
+
+<!-- third section start -->
+
+<div style="background-color: #4b2b2b;" class="container mt-5">
+  <div class="row custom-container">
+   
+    <div class="col-md-6 col-sm-12 text-center text-md-start">
+      <img style="height: auto; max-height: 650px;" data-aos="fade-right" src="images/family.avif" alt="Family at Theme Park" class="img-fluid rounded" 
+        />
+    </div>
+
+    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+      <div data-aos="fade-up" class="dashed-border">
+        <h2 data-aos="fade-left" class="fw-bold fs-1" style="color: #223b53;">
+          Find the best deals on Gold Coast theme park tickets
+        </h2>
+        <p data-aos="fade-left" class="fw-semibold fs-4">
+          View your entry ticket, annual pass, upgrade, and experience options here.
+        </p>
+        <p style="font-size: 25px;" data-aos="fade-left ">
+          Explore every world of adventure at Dreamworld, make a splash at WhiteWater World, 
+          or soar to new heights at SkyPoint Observation Deck.
+        </p>
+        <a href="#" class="btn btn-success mt-3">
+          Buy tickets →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- third section end -->
+
+
+<!-- four section start -->
+
+<div style="background-color:  #feca57;width: 100%;" class="mt-5">
+  <div style="height: auto;" class="custom-container2 mt-5">
+    <div class="row align-items-center">
+      
+      <div class="col-md-4 col-sm-12 text-center text-md-start">
+        <img
+        data-aos="fade-right"
+          src="images/chiefe.png"
+          alt="Food Image Left"
+          class="img-fluid rounded mt-5"
+        />
+      </div>
+    
+      <div class="col-md-4 col-sm-12 text-center mt-4 mt-md-0">
+        <h2 data-aos="fade-up" class="fw-bold" style="color: #223b53 ;">Food & Dining in the Park</h2>
+        <p class="mt-4" style="font-size:20px;" data-aos="fade-up">
+          Indulge in a variety of delicious cuisines at our theme park! From fast-food favorites to gourmet dining, there’s something for every palate. Enjoy snacks, desserts, and beverages while exploring the park.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 text-center text-md-end">
+        <img
+        data-aos="fade-left"
+          src="images/family.png"
+          alt="Food Image Right"
+          class="img-fluid rounded mt-4 mt-md-0"
+        />
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a  href="#" class="btn btn-success px-4 py-2 fs-4">
+        Learn more
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- four section end -->
+
+
+<!-- five section start -->
+
+<div style="background-color:#feca57;" class="container mt-5">
+  <div style="height: 750px; background-color: #223b53;" class="row custom-container">
+   
+    
+    <div class="col-12 col-md-6">
+      <img style="height: 100%; width: 100%; object-fit: cover;" data-aos="fade-right" src="images/kids.jpg" alt="Family at Theme Park" class="img-fluid rounded" />
+    </div>
+   
+    
+    <div style="height: 100%; display: flex; align-items: center;" class="col-12 col-md-6 d-flex flex-column justify-content-center">
+      <div data-aos="fade-up" class="dashed-border">
+        <h2 data-aos="fade-left" class="fw-bold fs-1" style="color:white;">
+          Get best value with a Locals Annual Pass
+        </h2>
+        <p style="color: white;" data-aos="fade-left" class="fw-semibold fs-4">
+          Book a year of adventure with just one annual pass, giving you access to three different attractions – visit as often as you like!
+        </p>
+        <a href="#" class="btn btn-success mt-3">
+          View all offers →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- five section end -->
+
+<!-- six section start -->
+<div class="background-video-container mt-5">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="videoes/SFQ Hero Day.mp4" type="video/mp4">
+   
+  </video>
+  <div class="text-container2"></div>
+  <div class="content">
+    <h1 style="color: white;">Fun Zone</h1>
+    <a href="#about" class="btn btn-success btn-about">About Us</a>
+  </div>
+</div>
+
+<!-- six section end -->
+
+<!-- seven section start -->
+
+<section class="guest-reviews">
+  <h2>From our guests</h2>
+  <div class="reviews-container">
+      <div style="padding: 40px;padding-left: 40px;padding-right: 40px;"  class="review">
+          <div  class="icon h-">📢</div>
+          <p>
+              Must go and best theme park in Australia with options of 3-day & annual passes. 
+              Best thrill, kids and family rides along with water sports. That's my second 
+              experience and was happy with parent swap option. Thanks everyone working there 
+              to make this place going and providing friendly environment.
+          </p>
+          <span class="author">
+              <img src="images/google.png" alt="Google Logo"> Timmy Zafar
+          </span>
+      </div>
+      <div class="review">
+          <div class="icon">📢</div>
+          <p>
+              Most thrilling day of my life to date. Steel Taipan, I think is the best roller coaster 
+              I've been on so far. I'll be taking this experience with us back to NZ.
+          </p><br><br><br><br>
+          <span class="author ">
+              <img src="images/google.png" alt="Google Logo"> Carl Heywood
+          </span>
+      </div>
+      <div class="review">
+          <div class="icon">📢</div>
+          <p>
+              Had a great day and loved Steel Taipan! We hadn’t been there for a few years and was 
+              surprised with how many new rides had been installed.
+          </p><br><br><br><br><br>
+          <span class="author">
+              <img src="images/google.png" alt="Google Logo"> Michael Mancini
+          </span>
+      </div>
+  </div>
+</section>
+
+<!-- seven section end -->
+
+
+
+
+<!-- footer -->
+
+<footer class="footer mt-5">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-3 footer-icons mb-4">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-tripadvisor"></i>
+      </div>
+
+     
+      <div class="col-md-3">
+        <h5>News & Offers</h5>
+        <form>
+          <input type="email" class="form-control mb-2" placeholder="Email Address">
+          <button class="btn px-4">Sign Up</button>
+        </form>
+      </div>
+
+      
+      <div class="col-md-3">
+        <h5>Directions</h5>
+        <p>100 W. Hersheypark Drive, Hershey, PA 17033</p>
+        <button class="btn px-4">Get Directions</button>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <p>717-534-3900</p>
+        <button class="btn px-4">Contact Us</button>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+     
+      <div class="col-md-6">
+        <h5>Important Links</h5>
+        <div class="d-flex flex-wrap">
+          <div class="me-5">
+            <a href="#">Jobs</a><br>
+            <a href="#">Partners</a><br>
+            <a href="#">Gift Cards</a><br>
+            <a href="#">Volunteers</a><br>
+            <a href="#">Media</a><br>
+            <a href="#">Season Pass Portal</a>
+          </div>
+          <div>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Social Responsibility</a><br>
+            <a href="#">Conditions</a><br>
+            <a href="#">Company Policies</a><br>
+            <a href="#">Do Not Sell My Personal Info</a><br>
+            <a href="#">Lost & Found</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 text-end">
+        <i class="bi bi-apple me-3" style="font-size: 24px;"></i>
+        <i class="bi bi-android2" style="font-size: 24px;"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="email-icon">
+  <i class="bi bi-envelope"></i>
+</div>
+
+  
+   <script>
+        AOS.init();
+      </script>
+
+
+</body>
+</html>
