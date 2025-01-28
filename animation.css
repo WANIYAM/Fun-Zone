@@ -1,0 +1,6 @@
+@keyframes changeText {
+    0% { content: "5 record breaking rides"; }
+    33% { content: "Exciting roller coasters"; }
+    66% { content: "Fun for the whole family"; }
+    100% { content: "5 record breaking rides"; }
+}
