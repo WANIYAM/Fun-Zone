@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rides & Attractions</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animation.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+
+    <!-- Your content goes here -->
+
+    <!-- Bootstrap JS, jQuery, and Swiper JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+</body>
+</html>
+
+    <style>
+        body {
+            background-color: black;
+            padding: 20px;
+            color: white;
+        }
+        .card {
+            background-color: #fdf6e3;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card img:hover {
+            transform: scale(1.05);
+        }
+        .tag {
+            background-color: #78c2ad;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .card-description {
+            font-size: 14px;
+            color: #666;
+        }
+        .card-actions a {
+            text-decoration: none;
+            color: #3b5998;
+            font-weight: bold;
+        }
+        html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 3.3rem;">ℝ𝕚𝕕𝕖𝕤 𝕒𝕟𝕕 𝕒𝕥𝕥𝕣𝕒𝕔𝕥𝕚𝕠𝕟𝕤</h1>
+    <div class="container mt-4">
+        <div class="row" id="card-container"></div>
+    </div>
+
+    <script>
+const ridesData = [
+    { tag: 'Thrill', title: 'Sky Screamer', description: 'Soar 200 feet into the sky at breathtaking speeds!', imageUrl: 'images/sky.jpg' },
+    { tag: 'Adventure', title: 'Jungle Trek Coaster', description: 'Race through a dense jungle with sudden drops and sharp turns!', imageUrl: 'images/jungle.jpg' },
+    { tag: 'Family', title: 'Magic Carousel', description: 'Enjoy a classic ride on beautifully crafted horses with enchanting music.', imageUrl: 'images/magic.jpg' },
+    { tag: 'Extreme', title: 'Tornado Twister', description: 'Spin and flip in a high-speed vortex of excitement!', imageUrl: 'images/tornado.jpg' },
+    { tag: 'Excitement', title: 'Dragon Coaster', description: 'Experience intense loops and drops on this fire-breathing roller coaster!', imageUrl: 'images/dragan.jpg' },
+    { tag: 'Park Ride', title: 'Gravity Spinner', description: 'Defy gravity as you spin and rise to thrilling heights!', imageUrl: 'images/gravity.jpeg' },
+    { tag: 'Leisure', title: 'Ferris Wheel', description: 'Enjoy stunning views from the top of our 150ft Ferris wheel.', imageUrl: 'images/ferris.jpeg' },
+    { tag: 'Dark Ride', title: 'Phantom Express', description: 'Embark on a ghostly roller coaster adventure through a haunted train station!', imageUrl: 'images/phentom.jpg' }
+];
+
+        
+        function createCard(ride) {
+            return `
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="${ride.imageUrl}" alt="${ride.title}">
+                        <div class="card-content">
+                            <div class="tag">${ride.tag}</div>
+                            <div class="card-title">${ride.title}</div>
+                            <div class="card-description">${ride.description}</div>
+                            <div class="card-actions">
+                                <a href="#"><i class="fas fa-info-circle"></i> Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        const cardContainer = document.getElementById('card-container');
+        ridesData.forEach(ride => {
+            cardContainer.innerHTML += createCard(ride);
+        });
+    </script>
+
+    
+<!-- footer -->
+
+<footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-md-3 footer-icons mb-4">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-tripadvisor"></i>
+        </div>
+  
+       
+        <div class="col-md-3">
+          <h5>News & Offers</h5>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Email Address">
+            <button class="btn px-4">Sign Up</button>
+          </form>
+        </div>
+  
+        
+        <div class="col-md-3">
+          <h5>Directions</h5>
+          <p>100 W. Hersheypark Drive, Hershey, PA 17033</p>
+          <button class="btn px-4">Get Directions</button>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Contact</h5>
+          <p>717-534-3900</p>
+          <button class="btn px-4">Contact Us</button>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+       
+        <div class="col-md-6">
+          <h5>Important Links</h5>
+          <div class="d-flex flex-wrap">
+            <div class="me-5">
+              <a href="#">Jobs</a><br>
+              <a href="#">Partners</a><br>
+              <a href="#">Gift Cards</a><br>
+              <a href="#">Volunteers</a><br>
+              <a href="#">Media</a><br>
+              <a href="#">Season Pass Portal</a>
+            </div>
+            <div>
+              <a href="#">Privacy Policy</a><br>
+              <a href="#">Social Responsibility</a><br>
+              <a href="#">Conditions</a><br>
+              <a href="#">Company Policies</a><br>
+              <a href="#">Do Not Sell My Personal Info</a><br>
+              <a href="#">Lost & Found</a>
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="col-md-6 text-end">
+          <i class="bi bi-apple me-3" style="font-size: 24px;"></i>
+          <i class="bi bi-android2" style="font-size: 24px;"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <div class="email-icon">
+    <i class="bi bi-envelope"></i>
+  </div>
+  
+</body>
+</html>
